@@ -15,9 +15,8 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     @number = params[:number]
     @phrase = params[:phrase].gsub('%20', ' ')
-    @number.to_i.times do
-      "#{@phrase}"
-    end
+    Array.new(@number, @phrase).each { |p| puts "#{@phrase}" }
+    
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
