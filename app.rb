@@ -12,12 +12,12 @@ class App < Sinatra::Base
     "#{@number.to_i**2}"
   end
 
-  get '/say/:number/:phrase' do
-    @number = params[:number].to_i
+  get '/say/:num/:phrase' do
+    @num = params[:num].to_i
     @phrase = params[:phrase].gsub('%20', ' ')
     # Array.new(@number.to_i, @phrase).each { |p| puts "#{@phrase}" }
-    @number.times do
-
+    @num.times do
+      
     end
   end
 
